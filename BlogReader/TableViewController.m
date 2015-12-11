@@ -35,6 +35,8 @@
         BlogPost *blogPost = [BlogPost blogPostWithTitle:[bpDictionary objectForKey:@"title"]];
         blogPost.author = [bpDictionary objectForKey:@"author"];
         blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
+        blogPost.date = [bpDictionary objectForKey:@"date"];
+        blogPost.url = [NSURL URLWithString:[bpDictionary objectForKey:@"url"]];
         [self.blogPosts addObject:blogPost];
     }
     
@@ -64,13 +66,17 @@
     
     BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
    
+    if ([blogPost.thumbnail isKindOfClass:[NSString class]]) {
     NSData *imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
     UIImage *image = [UIImage imageWithData:imageData];
     
-    
     cell.imageView.image = image;
+    } else {
+        cell.imageView.image = [UIImage imageNamed:@"treehouse.png"];
+    }
+    
     cell.textLabel.text = blogPost.title;
-    cell.detailTextLabel.text = blogPost.author;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", blogPost.author, [blogPost formattedDate]];
     return cell;
 }
 
@@ -109,14 +115,22 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+#pragma mark - Navigation
+ 
+ -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+     BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+     UIApplication *application = [UIApplication sharedApplication];
+     [application openURL:blogPost.url];
+ 
+ }
+
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//}
+
 
 @end

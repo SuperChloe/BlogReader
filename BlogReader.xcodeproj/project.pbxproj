@@ -15,6 +15,8 @@
 		89EC6C581C17BB410034A68F /* BlogReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6C571C17BB410034A68F /* BlogReaderTests.m */; };
 		89EC6C631C17BB410034A68F /* BlogReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6C621C17BB410034A68F /* BlogReaderUITests.m */; };
 		89EC6C721C19093B0034A68F /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6C711C19093B0034A68F /* TableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		89EC6C751C1A5E8A0034A68F /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6C741C1A5E890034A68F /* BlogPost.m */; settings = {ASSET_TAGS = (); }; };
+		89EC6C771C1A73F70034A68F /* treehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EC6C761C1A73F70034A68F /* treehouse.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		89EC6C641C17BB410034A68F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89EC6C701C19093B0034A68F /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		89EC6C711C19093B0034A68F /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		89EC6C731C1A5E890034A68F /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
+		89EC6C741C1A5E890034A68F /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
+		89EC6C761C1A73F70034A68F /* treehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treehouse.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,8 @@
 				89EC6C411C17BB400034A68F /* AppDelegate.m */,
 				89EC6C701C19093B0034A68F /* TableViewController.h */,
 				89EC6C711C19093B0034A68F /* TableViewController.m */,
+				89EC6C731C1A5E890034A68F /* BlogPost.h */,
+				89EC6C741C1A5E890034A68F /* BlogPost.m */,
 				89EC6C461C17BB400034A68F /* Main.storyboard */,
 				89EC6C491C17BB400034A68F /* Assets.xcassets */,
 				89EC6C4B1C17BB400034A68F /* LaunchScreen.storyboard */,
@@ -117,6 +124,7 @@
 		89EC6C3D1C17BB400034A68F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				89EC6C761C1A73F70034A68F /* treehouse.png */,
 				89EC6C3E1C17BB400034A68F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -243,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EC6C771C1A73F70034A68F /* treehouse.png in Resources */,
 				89EC6C4D1C17BB400034A68F /* LaunchScreen.storyboard in Resources */,
 				89EC6C4A1C17BB400034A68F /* Assets.xcassets in Resources */,
 				89EC6C481C17BB400034A68F /* Main.storyboard in Resources */,
@@ -273,6 +282,7 @@
 				89EC6C421C17BB400034A68F /* AppDelegate.m in Sources */,
 				89EC6C721C19093B0034A68F /* TableViewController.m in Sources */,
 				89EC6C3F1C17BB400034A68F /* main.m in Sources */,
+				89EC6C751C1A5E8A0034A68F /* BlogPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
